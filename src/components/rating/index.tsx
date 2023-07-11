@@ -51,7 +51,7 @@ export default function Rating({ productId }: RatingProps) {
   useEffect(() => {
     const getRating = localStorage.getItem(productId);
     if (getRating) setAvaliationInfo([...avaliationInfo, JSON.parse(getRating)]);
-  }, [productId, avaliationInfo]);
+  }, []);
 
   return (
     <div className={ styles.ratingContainer }>
