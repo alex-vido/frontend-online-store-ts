@@ -48,7 +48,7 @@ aside button:hover {
   font-weight: 700;
 }
 
-section {
+.homeSection {
   align-items: center;
   background-color: whitesmoke;
   display: flex;

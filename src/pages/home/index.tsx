@@ -36,7 +36,7 @@ function Home({
             </button>))}
       </aside>
       <section
-        className={ styles.section }
+        className={ styles.homeSection }
       >
         {searchValue.length === 0 && products.length === 0
           ? (

@@ -6,6 +6,9 @@
 * {
   font-size: 10px;
   font-family: 'Epilogue', sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
 html, body, div, span, applet, object, iframe,
