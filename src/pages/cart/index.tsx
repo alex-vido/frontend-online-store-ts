@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import backButton from '../../assets/backbtn.svg';
 import CartProducts from '../../components/CartProducts';
 import { ProductType } from '../../types';
 import styles from './cart.module.css';
@@ -59,29 +60,43 @@ function Cart() {
   }
 
   return (
-    <div
-      className={ styles.container }
-    >
-      <h1
-        className={ styles.title }
-      >
-        Carrinho de compras
+    <section className={ styles.cartMainContainer }>
 
-      </h1>
-      <CartProducts
-        cartProducts={ cartProducts }
-        handleDecreaseButton={ handleDecreaseButton }
-        handleDeleteButton={ handleDeleteButton }
-        handleIncreaseButton={ handleIncreaseButton }
-      />
-      <Link
-        className={ styles.btn }
-        to="/checkout"
-        data-testid="checkout-products"
-      >
-        Finalizar Compra
-      </Link>
-    </div>
+      <section className={ styles.cartContainer }>
+        <Link to="/">
+          <img src={ backButton } alt="vack button" />
+
+        </Link>
+        <section className={ styles.cartProdcutsContainer }>
+          <h1
+            className={ styles.title }
+          >
+            Carrinho de compras
+
+          </h1>
+          <CartProducts
+            cartProducts={ cartProducts }
+            handleDecreaseButton={ handleDecreaseButton }
+            handleDeleteButton={ handleDeleteButton }
+            handleIncreaseButton={ handleIncreaseButton }
+          />
+        </section>
+      </section>
+      <section className={ styles.checkoutCartContainer }>
+        <h3>
+          Valor total da compra
+          <span>r$ 7500,00</span>
+        </h3>
+        <Link
+          className={ styles.btn }
+          to="/checkout"
+          data-testid="checkout-products"
+        >
+          Finalizar Compra
+        </Link>
+
+      </section>
+    </section>
   );
 }
 

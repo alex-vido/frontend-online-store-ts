@@ -1,9 +1,18 @@
 header {
   align-items: center;
-  background-color: #003be5;
+  background-color: var(--blue);
   display: flex;
+  height: 10.8rem;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1.6rem 3.2rem;
+  width: 100%;
+}
+
+.searchLabel {
+  background-color: var(--soft-white);
+  display: flex;
+  gap: 1.2rem;
+  padding: 0.8rem;
 }
 
 .searchButton {
@@ -12,17 +21,23 @@ header {
   cursor: pointer;
 }
 
+.searchIcon {
+  width: 2rem;
+}
+
 .searchInput {
   background-color: transparent;
   border: none;
-  color: #b0b3bb;
-  font-size: 1.2rem;
+  color: var(--placeholder);
+  font-size: 1.6rem;
   font-weight: 300;
   outline: none;
 }
 
-.search {
-  background-color: white;
-  display: flex;
-  padding: 0.2rem;
+.logo {
+  width: 24.7rem;
+}
+
+.cardIcon {
+  width: 4rem;
 }

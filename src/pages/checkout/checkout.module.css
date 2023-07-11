@@ -1,6 +1,6 @@
 .checkoutContainer {
+  background-color: var(--soft-gray);
   display: flex;
-  background-color: whitesmoke;
   flex-grow: 1;
 }
 
@@ -8,92 +8,53 @@
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
-  width: 50%;
   padding: 2rem 4rem;
+  width: 50%;
 }
 
 .productDetails {
-  background-color: white;
+  background-color: var(--soft-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0.01rem 0.3rem 0.8rem;
+  flex-grow: 1;
   padding: 4.4rem;
 }
 
 .reviewTitle {
+  border-bottom: 0.1rem solid var(--soft-gray);
   font-size: 2rem;
   font-weight: 700;
+  padding-bottom: 1.6rem;
   text-align: center;
-  border-bottom: 1px solid #94979d;
-  padding-bottom: 1.5rem;
 }
 
 .reviewTotal {
+  border-top: 0.1rem solid #94979d;
   font-size: 2rem;
   font-weight: 700;
+  padding-top: 1.6rem;
   text-align: center;
-  border-top: 1px solid #94979d;
-  padding-top: 1.5rem;
-}
-
-.form {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  background-color: white;
 }
 
 .container {
   align-items: center;
-  border-top: 1px solid #b0b3bb;
+  border-top: 1px solid var(--placeholder);
   display: flex;
-  gap: 1.4rem;
+  gap: 1.6rem;
   justify-content: center;
   padding: 1.6rem;
 }
 
 .title {
-  font-size: 1.2rem;
+  color: var(--gray);
+  font-size: 1.6rem;
+  font-weight: 700;
   white-space: break-spaces;
-  width: 300px;
-  font-weight: 500;
-  color: #444955;
+  width: 30rem;
 }
 
 .price {
-  font-size: 1.2rem;
-  color: #444955;
-  font-weight: 500;
-}
-
-.form {
-  display: flex;
-  flex-direction: column;
-  padding: 2.4rem 5.6rem;
-  gap: 1.6rem;
-}
-
-.formTitle {
-  font-size: 2rem;
+  color: var(--gray);
+  font-size: 1.6rem;
   font-weight: 700;
+  white-space: nowrap;
 }
-
-.fieldset {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  gap: 0.8rem;
-}
-
-.input {
-  width: 18.81rem;
-  height: 2rem;
-  border: 1px solid #94979d;
-  padding: 0.5rem;
-}
-.cep {
-  width: 10.75rem;
-}
-
-.address {
-  width: 26.87rem;
-}
-

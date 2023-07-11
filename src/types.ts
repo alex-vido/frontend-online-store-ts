@@ -17,7 +17,8 @@ export interface ProductType {
   price: string;
   thumbnail: string;
   id: string;
-  quantity: number
+  quantity: number;
+  description:string;
 }
 export type CartProduct = {
   quantity: number;
@@ -28,4 +29,8 @@ export type RatingType = {
   email: string;
   text?: string;
   rating: string;
+};
+
+export type ProductDescriptionType = {
+  'plain_text':string
 };

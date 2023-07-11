@@ -1,37 +1,115 @@
-.container {
+.productMainContainer {
+  background-color: var(--soft-gray);
+  display: flex;
+  flex-grow: 1;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+.productDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 2.4rem 3.6rem;
+  width: 50%;
+}
+
+.produtDestails {
   align-items: center;
+  background-color: var(--soft-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0.01rem 0.3rem 0.8rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  gap: 20px;
-  justify-content: center;
+  padding: 4rem;
 }
 
-.img {
-  height: 500px;
-  width: 500px;
+.produtDestails h2 {
+  font-size: 2rem;
+  font-weight: 700;
 }
 
-.title {
-  font-size: 1.66rem;
+.produtDestails img {
+  height: 36rem;
 }
 
-.price {
-  color: #444955;
-  font-size: 1.2rem;
-}
-
-.price span {
-  color: #b0b3bb;
-}
-
-.btn {
-  background-color: #31c28d;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 10px 0;
+.productDescriptionContainer {
+  background-color: var(--soft-white);
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  padding: 6.8rem 5.6rem;
   width: 50%;
+}
+
+.productDescriptionContainer h2 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.description {
+  color: var(--gray);
+  font-size: 1.6rem;
+  font-weight: 400;
+  height: 60rem;
+  line-height: 1.8rem;
+  max-width: 60rem;
+  min-width: 34rem;
+  overflow-y: auto;
+}
+
+.productDescriptionFooter {
+  display: flex;
+  gap: 4rem;
+}
+
+.productDescriptionFooter h3 {
+  align-items: center;
+  color: var(--dark-gray);
+  display: flex;
+  font-size: 2rem;
+}
+
+.addQuantityButton span {
+  background-color: var(--placeholder);
+  border-radius: 50%;
+  color: var(--soft-white);
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem 1.6rem;
+}
+
+.productDescriptionFooter h3 span {
+  color: var(--gray);
+  font-size: 1.6rem;
+}
+
+.addQuantityButton {
+  align-items: center;
+  display: flex;
+  gap: 0.8rem;
+}
+
+.addQuantityButton button {
+  background: transparent;
+  border: none;
+  color: var(--placeholder);
+  cursor: pointer;
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.addButton {
+  background-color: var(--green);
+  border: none;
+  color: var(--soft-white);
+  cursor: pointer;
+  font-weight: 700;
+  padding: 1.2rem 3.2rem;
+  transition: all 350ms ease-in-out;
+}
+
+.addButton:hover {
+  background-color: var(--green-hover);
+  transition: all 350ms ease-in-out;
 }

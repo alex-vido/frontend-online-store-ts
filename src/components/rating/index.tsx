@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
+import { StarIcon } from '../../assets/star';
 import { RatingType } from '../../types';
+import styles from './rating.module.css';
 
 type RatingProps = {
   productId: string
@@ -49,42 +51,43 @@ export default function Rating({ productId }: RatingProps) {
   useEffect(() => {
     const getRating = localStorage.getItem(productId);
     if (getRating) setAvaliationInfo([...avaliationInfo, JSON.parse(getRating)]);
-  }, [productId, avaliationInfo]);
+  }, []);
 
   return (
-    <div>
-      <h2>Avaliações</h2>
-      <form>
-        <label htmlFor="email">
-          <input
-            type="text"
-            data-testid="product-detail-email"
-            name="email"
-            id="email"
-            placeholder="Email"
-            value={ email }
-            onChange={ (event) => setEmail(event.target.value) }
-          />
-        </label>
+    <div className={ styles.ratingContainer }>
+      <h2 className={ styles.ratingTitle }>Avaliações</h2>
+      <form className={ styles.formRating }>
+        <fieldset className={ styles.ratingFildset }>
+          <label htmlFor="email">
+            <input
+              type="text"
+              data-testid="product-detail-email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              value={ email }
+              className={ styles.inputEmail }
+              onChange={ (event) => setEmail(event.target.value) }
+            />
+          </label>
 
-        <label htmlFor="star">
-          {ratingLevel.map((lvl) => (
-            <div key={ lvl }>
-              {lvl}
-              <input
-                type="radio"
-                name="star"
-                data-testid={ `${lvl}-rating` }
-                onChange={ () => handleRatingLvl(String(lvl)) }
-              />
-            </div>
-          ))}
-        </label>
+          <label htmlFor="star" className={ styles.ratingLabel }>
+            {ratingLevel.map((lvl) => (
+              <div key={ lvl }>
+                <input
+                  type="radio"
+                  name="star"
+                  data-testid={ `${lvl}-rating` }
+                  onChange={ () => handleRatingLvl(String(lvl)) }
+                />
+                <StarIcon />
+              </div>
+            ))}
+          </label>
 
-        <br />
-        <label htmlFor="feedback">
-          <input
-            type="textarea"
+        </fieldset>
+        <label htmlFor="feedback" className={ styles.feedback }>
+          <textarea
             data-testid="product-detail-evaluation"
             name="feedback"
             placeholder="Mensagem (opcional)"
@@ -93,6 +96,7 @@ export default function Rating({ productId }: RatingProps) {
           />
         </label>
         <button
+          className={ styles.ratingButton }
           data-testid="submit-review-btn"
           value={ feedback }
           onClick={ (event) => handleClick(event) }

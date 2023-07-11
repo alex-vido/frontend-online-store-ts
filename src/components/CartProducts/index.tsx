@@ -36,28 +36,29 @@ function CartProducts({
 
       </h2>
       <button
-        className={ `${styles.btn} ${styles.btnQuantity}` }
+        className={ `${styles.btnQuantity} ${styles.btnQuantityDecrease}` }
         data-testid="product-decrease-quantity"
         onClick={ () => handleDecreaseButton(cartProduct) }
       >
         -
-
       </button>
       <h3
         data-testid="shopping-cart-product-quantity"
+        className={ styles.quantity }
       >
         {cartProduct.quantity}
       </h3>
       <button
-        className={ `${styles.btn} ${styles.btnQuantity}` }
+        className={ styles.btnQuantity }
         data-testid="product-increase-quantity"
         onClick={ () => handleIncreaseButton(cartProduct) }
       >
         +
       </button>
-      <h3>
-        <span>R$ </span>
-        { Number(cartProduct.price).toFixed(2).replace('.', ',') }
+      <h3 className={ styles.productPrice }>
+        R$
+        {(Number(cartProduct.price) * Number(cartProduct.quantity))
+          .toFixed(2).replace('.', ',')}
       </h3>
     </div>
   )));

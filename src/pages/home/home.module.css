@@ -1,105 +1,139 @@
 .container {
   display: flex;
   flex-grow: 1;
-  justify-content: space-between;
-}
-
-aside {
-  align-items: start;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  max-height: calc(100vh - 102px);
-  overflow-x: scroll;
-  padding: 0 1.5rem;
-}
-
-aside h2 {
-  border-bottom: 1px solid #b0b3bb;
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-  padding: 15px 0;
+  height: calc(100vh - 10.8rem);
   width: 100%;
 }
 
-aside button {
+.asideContainer {
+  align-items: start;
+  background-color: var(--soft-white);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 3.6rem 4rem;
+  width: 31rem;
+}
+
+.asideContainer h2 {
+  border-bottom: 0.1rem solid var(--placeholder);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 3.2rem;
+  padding: 1.6rem 0;
+  width: 100%;
+}
+
+.asideButton {
   background-color: transparent;
   border: none;
-  color: #323232;
+  color: var(--gray);
   cursor: pointer;
-  font-size: 1rem;
-  margin: 0.2rem 0;
+  font-size: 1.6rem;
+  margin: 0.8rem 0;
   white-space: nowrap;
 }
 
-.product button {
-  background-color: #31c28d;
-  border: none;
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  font-size: 1rem;
-  padding: 10px 0;
-  width: 100%;
-}
-
-aside button:hover {
+.asideButton:hover {
   font-weight: 700;
 }
 
 .homeSection {
   align-items: center;
-  background-color: whitesmoke;
+  background-color: var(--soft-gray);
   display: flex;
   flex-grow: 1;
   flex-wrap: wrap;
-  font-size: 1.6rem;
+  gap: 3.2rem;
   justify-content: space-evenly;
-  max-height: calc(100vh - 102px);
-  overflow-x: scroll;
+  overflow-y: auto;
+  padding: 8rem 4rem;
   width: calc(100vw - 17.2rem);
 }
 
-.product {
+.homeInitialMessage {
   align-items: center;
-  background-color: white;
+  color: var(--gray);
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  font-weight: 400;
+  gap: 2.4rem;
+  text-align: center;
+  width: 34.7rem;
+}
+
+.homeInitialMessage span {
+  color: var(--green);
+  font-size: 3.2rem;
+  font-weight: 500;
+  text-align: center;
+  width: 35.1rem;
+}
+
+.productContainer {
+  align-items: center;
+  background-color: var(--soft-white);
+  box-shadow: rgba(0, 0, 0, 0.24) 0.01rem 0.3rem 0.8rem;
   display: flex;
   flex-direction: column;
   font-size: 1.2rem;
-  gap: 20px;
+  gap: 2rem;
   justify-content: center;
   margin: 1rem;
-  padding: 2rem;
+  padding: 1.6rem;
   text-align: center;
-  width: 280px;
 }
 
-.product img {
-  align-self: center;
-  height: 200px;
-  margin-bottom: 10px;
-  width: 175px;
-}
-
-.product a {
-  gap: 20px;
+.productLink {
+  gap: 2rem;
+  overflow: hidden;
   text-decoration: none;
 }
 
-.product h2 {
-  color: black;
+.productImage {
+  align-self: center;
+  height: 20.8rem;
+  margin-bottom: 1.2rem;
+  width: 16rem;
+}
+
+.productName {
+  color: var(--dark-gray);
+  font-size: 1.6rem;
+  font-weight: 700;
   overflow: hidden;
   padding-bottom: 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
-  width: 270px;
+  width: 20.8rem;
 }
 
-.product h3 {
+.productPrice {
   color: #444955;
+  font-size: 2rem;
 }
 
-.product h3 span {
+.productPrice span {
   color: #b0b3bb;
+  font-size: 1.6rem;
+  margin-right: 0.4rem;
+}
+
+.addButton {
+  background-color: var(--green);
+  border: none;
+  color: var(--soft-white);
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1.2rem 3.6rem;
+  transition: all 500ms ease-in-out;
+}
+
+.addButton:hover {
+  background-color: var(--green-hover);
+  transition: all 350ms ease-in-out;
 }
