@@ -5,7 +5,7 @@ import styles from './layout.module.css';
 function Layout({ handleChange, handleClick, searchValue }: HeaderProps) {
   return (
     <div
-      className={ styles.container }
+      className={ styles.mainContainer }
     >
       <Header
         handleChange={ handleChange }

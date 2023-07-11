@@ -101,8 +101,8 @@ function App() {
             <Product />
           }
         />
+        <Route path="/checkout" element={ <Checkout /> } />
       </Route>
-      <Route path="/checkout" element={ <Checkout /> } />
     </Routes>
   );
 }
