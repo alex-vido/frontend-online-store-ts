@@ -1,0 +1,83 @@
+.ratingContainer {
+  align-items: center;
+  background-color: var(--soft-white);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 37.2rem;
+  margin-top: 2.4rem;
+  padding: 3.2rem 33.6rem;
+}
+
+.ratingTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2.4rem;
+
+}
+
+.formRating {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  height: 100%;
+}
+
+
+.ratingFildset {
+  border: none;
+  display: flex;
+}
+
+.inputEmail {
+  border: 0.1rem solid var(--placeholder);
+  font-size: 1.6rem;
+  height: 3.6rem;
+  padding-left: 1.2rem;
+  width: 32.5rem;
+}
+
+.ratingLabel {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.ratingLabel input {
+  opacity: 0;
+}
+
+
+.ratingLabel svg:hover {
+  stroke: var(--green);
+}
+
+.feedback textarea {
+  border: 0.1rem solid var(--placeholder);
+  font-size: 1.6rem;
+  height: 15.2rem;
+  padding: 1.6rem 0.8rem;
+  width: 100%;
+}
+
+.feedback textarea:focus, .inputEmail:focus {
+  outline: 0.1rem var(--green) solid;
+}
+
+.ratingButton {
+  align-self: center;
+  background-color: var(--green);
+  border: none;
+  color: var(--soft-white);
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 1.2rem 3.2rem;
+  transition: all 350ms ease-in-out;
+}
+
+.ratingButton :hover {
+  background-color: var(--green-hover);
+  transition: all 350ms ease-in-out;
+}

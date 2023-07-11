@@ -1,8 +1,8 @@
 import { Link } from 'react-router-dom';
 import cart from '../../assets/carrinho.svg';
 import logo from '../../assets/logo.svg';
-import styles from './header.module.css';
 import searchIcon from '../../assets/search.svg';
+import styles from './header.module.css';
 
 export type HeaderProps = {
   handleClick: () => void,
@@ -14,8 +14,8 @@ function Header({ handleChange, handleClick, searchValue }: HeaderProps) {
   return (
     <header className={ styles.header }>
       <label
-        className={ styles.search }
-        htmlFor="search"
+        className={ styles.searchLabel }
+        htmlFor="searchLabel"
       >
         <input
           className={ styles.searchInput }
@@ -35,15 +35,16 @@ function Header({ handleChange, handleClick, searchValue }: HeaderProps) {
           <img
             src={ searchIcon }
             alt="search icon"
+            className={ styles.searchIcon }
           />
         </button>
       </label>
-      <img src={ logo } alt="logo" />
+      <img src={ logo } alt="logo" className={ styles.logo } />
       <Link
         to="/cart"
         data-testid="shopping-cart-button"
       >
-        <img src={ cart } alt="cart" />
+        <img src={ cart } alt="cart" className={ styles.cardIcon } />
       </Link>
     </header>
   );
